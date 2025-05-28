@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar Interativo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fundo estrelado -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button id="reset-view">Visão Geral</button>
+        <div class="speed-control">
+            <label for="speed">Velocidade:</label>
+            <input type="range" id="speed" min="0.1" max="2" step="0.1" value="1">
+            <span id="speed-value">1x</span>
+        </div>
+    </div>
+
+    <!-- Painel lateral -->
+    <div class="side-panel">
+        <h2><span class="icon">🌌</span> Sistema Solar</h2>
+        <div class="planet-menu">
+            <div class="planet-item" data-planet="sun">
+                <img src="./img/sun.png" alt="Sol">
+                <span>Sol</span>
+            </div>
+            <div class="planet-item" data-planet="mercury">
+                <img src="./img/mercury.png" alt="Mercúrio">
+                <span>Mercúrio</span>
+            </div>
+            <div class="planet-item" data-planet="venus">
+                <img src="./img/venus.png" alt="Vênus">
+                <span>Vênus</span>
+            </div>
+            <div class="planet-item" data-planet="earth">
+                <img src="./img/earth.png" alt="Terra">
+                <span>Terra</span>
+            </div>
+            <div class="planet-item" data-planet="mars">
+                <img src="./img/mars.png" alt="Marte">
+                <span>Marte</span>
+            </div>
+            <div class="planet-item" data-planet="jupiter">
+                <img src="./img/jupiter.png" alt="Júpiter">
+                <span>Júpiter</span>
+            </div>
+            <div class="planet-item" data-planet="saturn">
+                <img src="./img/saturn.png" alt="Saturno">
+                <span>Saturno</span>
+            </div>
+            <div class="planet-item" data-planet="uranus">
+                <img src="./img/uranus.png" alt="Urano">
+                <span>Urano</span>
+            </div>
+            <div class="planet-item" data-planet="neptune">
+                <img src="./img/neptune.png" alt="Netuno">
+                <span>Netuno</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sistema Solar -->
+    <div class="solar-system">
+        <!-- Sol -->
+        <div class="sun planet" data-planet="sun"></div>
+        
+        <!-- Planetas -->
+        <div class="orbit mercury-orbit">
+            <div class="mercury planet" data-planet="mercury"></div>
+        </div>
+        
+        <div class="orbit venus-orbit">
+            <div class="venus planet" data-planet="venus"></div>
+        </div>
+        
+        <div class="orbit earth-orbit">
+            <div class="earth planet" data-planet="earth"></div>
+        </div>
+        
+        <div class="orbit mars-orbit">
+            <div class="mars planet" data-planet="mars"></div>
+        </div>
+        
+        <div class="orbit jupiter-orbit">
+            <div class="jupiter planet" data-planet="jupiter"></div>
+        </div>
+        
+        <div class="orbit saturn-orbit">
+            <div class="saturn planet" data-planet="saturn"></div>
+            <div class="saturn-ring"></div>
+        </div>
+        
+        <div class="orbit uranus-orbit">
+            <div class="uranus planet" data-planet="uranus"></div>
+        </div>
+        
+        <div class="orbit neptune-orbit">
+            <div class="neptune planet" data-planet="neptune"></div>
+        </div>
+    </div>
+
+    <!-- Painel de Informações -->
+    <div class="info-panel">
+        <div class="info-header">
+            <h2 class="planet-name">Planeta</h2>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="planet-image-container">
+            <div class="planet-image"></div>
+        </div>
+        <div class="planet-info">
+            <p><strong>Diâmetro:</strong> <span class="diameter">-</span></p>
+            <p><strong>Massa:</strong> <span class="mass">-</span></p>
+            <p><strong>Distância do Sol:</strong> <span class="distance">-</span></p>
+            <p><strong>Temperatura:</strong> <span class="temperature">-</span></p>
+            <p><strong>Período Orbital:</strong> <span class="orbital-period">-</span></p>
+            <p class="description">-</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
